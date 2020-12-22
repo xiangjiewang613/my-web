@@ -1,0 +1,41 @@
+<html>
+<head>
+  <title>我也不知道这是个啥</title>
+  <c:set var="path" value="${pageContext.request.contextPath}" scope="page"/>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <style>
+    #box {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      position: absolute;
+      left: 100px;
+    }
+  </style>
+  <script>
+    window.onload = function (){
+      var box = document.getElementById("box");
+      box.onclick = function (){
+        if (this.style.backgroundColor == "red")
+        {
+          this.style.backgroundColor = "yellow";
+          this.innerText = "111111"
+        }
+        else{
+          this.style.backgroundColor = "red";
+          this.innerText = "12211"
+        }
+      }
+    }
+  </script>
+</head>
+
+<body>
+<div id="box">
+啊打发的孙
+</div>
+</body>
+</html>
+
